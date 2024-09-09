@@ -26,3 +26,8 @@ Una empresa de alquiler de vehículos necesita gestionar la información sobre s
 - Un cliente puede realizar uno o más alquileres.
 - Un alquiler tiene una devolución correspondiente.
 - Cada devolución está asociada a un alquiler.
+
+## DIAGRAMA ENTIDAD-RELACIÓN
+
+![Uso de la db](./consultas/ERD_Alquiler_vehiculos.png "ERD Alquiler vehiculos")
+

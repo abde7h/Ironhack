@@ -23,10 +23,10 @@ CREATE TABLE clientes (
 
 CREATE TABLE alquileres (
     id_alquiler INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    fecha_inicio DATETIME
+    fecha_inicio DATETIME,
     fecha_fin DATETIME,
-    FOREIGN KEY id_vehiculo REFERENCES vehiculos(id_vehiculo),
-    FOREIGN KEY id_cliente REFERENCES clientes(id_cliente),
+    FOREIGN KEY (id_vehiculo) REFERENCES vehiculos(id_vehiculo),
+    FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente),
     precio INT
 );
 
@@ -34,5 +34,5 @@ CREATE TABLE devoluciones (
     id_devolucion INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     fecha_devolucion DATETIME,
     observaciones varchar(500),
-    FOREIGN KEY id_alquiler REFERENCES alquileres(id_alquiler)
-)
+    FOREIGN KEY (id_alquiler) REFERENCES alquileres(id_alquiler)
+);

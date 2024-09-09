@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXIST supermercado_db;
+CREATE DATABASE IF NOT EXISTS supermercado_db;
 
 USE supermercado_db;
 

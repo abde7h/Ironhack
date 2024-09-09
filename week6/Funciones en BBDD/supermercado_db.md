@@ -19,3 +19,8 @@ Un supermercado necesita gestionar información sobre productos, proveedores, cl
 - **Proveedores-Productos**: Un proveedor suministra uno o más productos, un producto pertenece a un proveedor.
 - **Clientes-Ventas**: Un cliente puede realizar varias ventas, pero una venta solo está asociada a un cliente.
 - **Ventas-Detalles de Venta**: Una venta incluye uno o más productos (detalles de venta).
+
+## DIAGRAMA ENTIDAD-RELACIÓN
+
+![Uso de la db](./consultas/ERD_SUPERMERCADODB.png "ERD Alquiler vehiculos")
+

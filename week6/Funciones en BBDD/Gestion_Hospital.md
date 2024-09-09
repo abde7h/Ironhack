@@ -22,3 +22,8 @@ Un hospital necesita gestionar información sobre pacientes, doctores, citas y t
 - **Pacientes-Citas**: Un paciente puede tener varias citas, pero cada cita corresponde a un solo paciente.
 - **Doctores-Citas**: Un doctor puede atender a muchos pacientes a través de citas.
 - **Citas-Recetas**: Una cita puede generar una o más recetas, y una receta está relacionada con un solo tratamiento.
+
+## DIAGRAMA ENTIDAD-RELACIÓN
+
+![Uso de la db](./consultas/ERD_Gestion_Hospital.png "ERD Alquiler vehiculos")
+

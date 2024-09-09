@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXIST gestionhospital_db;
+CREATE DATABASE IF NOT EXISTS gestionhospital_db;
 
 USE gestionhospital_db;
 
