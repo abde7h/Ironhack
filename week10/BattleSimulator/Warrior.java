@@ -1,4 +1,4 @@
-import java.util.Random.*;
+import java.util.Random;
 
 class Warrior extends Character implements Attacker {
     private int stamina;

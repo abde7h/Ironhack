@@ -1,4 +1,4 @@
-import java.util.Random.*;
+import java.util.Random;
 
 class Wizard extends Character implements Attacker {
     private int mana;

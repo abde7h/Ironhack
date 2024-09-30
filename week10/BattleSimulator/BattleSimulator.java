@@ -4,7 +4,7 @@ public class BattleSimulator {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Attacker character1, character2;  // Cambiado a Attacker
+        Attacker character1, character2;
 
         // Creación de personajes
         System.out.println("Crear Personaje 1:");
@@ -12,20 +12,21 @@ public class BattleSimulator {
         String name1 = scanner.nextLine();
         System.out.print("Elige tipo (1 para Guerrero, 2 para Mago): ");
         int type1 = scanner.nextInt();
-        character1 = (Attacker) createCharacter(name1, type1);  // Casting a Attacker
+        scanner.nextLine(); // Consumir la nueva línea sobrante
 
-        scanner.nextLine(); // Consumir nueva línea
+        character1 = createCharacter(name1, type1);  // Cambiado: no necesita casteo
 
         System.out.println("Crear Personaje 2:");
         System.out.print("Ingresa el nombre para Guerrero o Mago: ");
         String name2 = scanner.nextLine();
         System.out.print("Elige tipo (1 para Guerrero, 2 para Mago): ");
         int type2 = scanner.nextInt();
-        character2 = (Attacker) createCharacter(name2, type2);  // Casting a Attacker
+        scanner.nextLine(); // Consumir la nueva línea sobrante
+
+        character2 = createCharacter(name2, type2);  // Cambiado: no necesita casteo
 
         // Bucle de batalla
-        while (character1 instanceof Character && character2 instanceof Character &&
-               ((Character) character1).isAlive() && ((Character) character2).isAlive()) {
+        while (((Character) character1).isAlive() && ((Character) character2).isAlive()) {
             character1.attack((Character) character2);
             character2.attack((Character) character1);
 
@@ -47,11 +48,12 @@ public class BattleSimulator {
         scanner.close();
     }
 
-    private static Character createCharacter(String name, int type) {
+    // Cambia el tipo de retorno a Attacker
+    private static Attacker createCharacter(String name, int type) {
         if (type == 1) {
-            return new Warrior(name);
+            return new Warrior(name);  // Warrior implementa Attacker
         } else {
-            return new Wizard(name);
+            return new Wizard(name);   // Wizard implementa Attacker
         }
     }
 }
